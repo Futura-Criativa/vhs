@@ -3,6 +3,7 @@ let stop = document.querySelector(".stop-btn")
 let player = document.querySelector(".videoPlayer");
 let download = document.querySelector(".download-btn");
 let block = document.querySelector(".description");
+let obs = document.querySelector(".obs-text");
 let mediaRecorder;
   
   
@@ -30,6 +31,7 @@ start.addEventListener("click", async function () {
       stop.style.display = "none";
       start.style.display = "";
       start.innerText = "Nova gravação";
+      obs.style.display = "";
       let blob = new Blob(chunks, {
           type: chunks[0].type
       })
