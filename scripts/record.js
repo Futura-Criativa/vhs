@@ -13,6 +13,7 @@ start.addEventListener("click", async function () {
   stop.style.display = "";
   start.style.display = "none";
   block.style.display = "none";
+  obs.style.display = "none";
   let stream = await navigator.mediaDevices.getDisplayMedia({
     video: true
   })
