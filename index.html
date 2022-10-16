@@ -8,13 +8,16 @@
     <meta name="generator" content="Hugo 0.104.2">
     <title>VH-S</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/cover/">
+    <!-- Bootstrap styles for this template -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
 
     <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="./assets/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
 
   </head>
 
@@ -33,17 +36,18 @@
 
   <main class="px-3">
     <h1>Simples. Foque no necessário.</h1>
-        <div class="description">
+        <div class="mt-3" id="about">
             <p class="lead">O VH-S é uma solução minimalista, elegante e gratuita para gravações de telas em computadores.</p>
         </div>
-        <div style="display:none;" class="videoPlayer">
-            <video class="video" width="600px" controls=""></video>
+        <div class="mt-3" id="player">
+            <video class="video" autoplay="autoplay" muted="muted"></video>
         </div>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white start-btn" style="">Iniciar gravação</a>
-      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white restart-btn" style="display: none;">Nova gravação</a>
-      <a href="#" class="btn btn-lg btn-danger fw-bold border-white bg-red stop-btn" style="display: none;">Parar gravação</a>
-      <a href="#" class="btn btn-lg btn-success fw-bold border-white bg-green download-btn" style="display: none;">Baixar gravação</a>
+    <p class="lead buttons">
+      <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white screen-btn" id="screen" onclick="recordScreen()">Gravar tela</a>
+      <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white audio-btn" id="audio" onclick="recordVideo()">Gravar vídeo</a>
+      <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white video-btn" id="video" onclick="recordAudio()">Gravar áudio</a>
+      <a href="#" class="btn btn-lg btn-danger fw-bold border-white bg-red stop-btn" id="stop">Parar gravação</a>
+      <a href="#" class="btn btn-lg btn-success fw-bold border-white bg-green download-btn" id="download">Baixar gravação</a>
     </p>
   </main>
 
@@ -57,7 +61,8 @@
 
 </div>
 
-<script src="./scripts/record.js"></script>
+<script src="./assets/scripts/recorder.js"></script>
+<!--script src="./assets/scripts/record.js"></script-->
 
   </body>
 </html>
